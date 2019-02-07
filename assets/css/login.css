@@ -49,6 +49,7 @@ body{
     border-radius: 5px;
 }
 .card-login > button{
+    margin-top: 3px;
     cursor: pointer;
 }
 /* Card Login items */
@@ -65,6 +66,7 @@ body{
     border-radius: 5px;
 }
 .card-register > button{
+    margin-top: 3px;
     cursor: pointer;
 }
 /* Card Register items */

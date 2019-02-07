@@ -15,7 +15,6 @@ if ( isset($_REQUEST['login']) ) {
         $_SESSION['customer'] = ["id" => $customer->id];
         echo json_encode($customer);
     }else{
-        $_SESSION['log_in'] = false;
         echo json_encode(false);
     }
 }

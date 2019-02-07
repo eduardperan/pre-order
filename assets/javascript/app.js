@@ -74,6 +74,11 @@ class App{
         });
 
         btnsignup.addEventListener('click', (e)=>{
+
+            if(txtpasswordr.value != txtrepassword.value) {
+                alert("Password mismatch");
+            } 
+
             let id = (new Date()).getTime().toString(36);//creates new customer id
             let datastring = 'register=true&id='+ id + '&fname=' + txtfname.value + '&lname=' + txtlname.value + '&email=' + txtemailr.value + '&password=' + txtpasswordr.value;
             this.ajax(
@@ -83,7 +88,9 @@ class App{
                 (data)=>{
                     let jsondata = JSON.parse(data);
                     if (jsondata != false) {
-                        
+                        cardreg.classList.add('dactive');
+                        cardlogin.classList.remove('dactive');
+                        alert("Please login to continue.");
                     }
                 }
             );
