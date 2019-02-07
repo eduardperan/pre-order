@@ -85,6 +85,10 @@ class OrderManager{
     setupEventHandler(){
         document.getElementById('btn-order')
         .addEventListener('click', (e)=>{
+            if (document.querySelectorAll('input:checked').length <=0) {
+                alert("Please choose from the menu.");
+                return;
+            } 
             this.checkOrderIfExist();
             this.checkOrderIfLate();
             this.saveCustomerSubId();
