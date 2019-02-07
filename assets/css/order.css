@@ -70,11 +70,6 @@ body{
 .dactive{
     display: none !important;
 }
-#btnlogout{
-    position: absolute;
-    top: 5px;
-    right: 10px;
-}
 #btnlogout:hover{
     color: white;
 }

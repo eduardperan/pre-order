@@ -17,7 +17,7 @@ class App{
     }
 
     ajax(url, type, datastring, callback){
-        this.xmlhttp.open(type, url);
+        this.xmlhttp.open(type, url, true);
         this.xmlhttp.onreadystatechange = ()=> {
             if (this.xmlhttp.readyState == 4 && this.xmlhttp.status == 200) {
                 callback(this.xmlhttp.responseText);

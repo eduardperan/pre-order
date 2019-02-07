@@ -144,8 +144,8 @@ if ( isset($_REQUEST['getsubid']) ) {
     $db = new Database();
     $db->connect();
     try{
-        $query = $db->db_con->prepare('select tblorder.sub_id, tblsub.cus_id from tblorder inner join tblsub on tblorder.sub_id = tblsub.id where tblsub.cus_id=?');
-        $query->execute(array($_SESSION['customer']['id']));
+        $query = $db->db_con->prepare('select tblorder.sub_id, tblorder.date, tblsub.cus_id from tblorder inner join tblsub on tblorder.sub_id = tblsub.id where tblsub.cus_id=? and tblorder.date=?');
+        $query->execute(array($_SESSION['customer']['id'], date("Y-m-d")));
         $res = $query->fetch(PDO::FETCH_ASSOC);
         echo $res['sub_id'] === null || $res['sub_id'] === 'null'? json_encode(false) : json_encode($res['sub_id']);
     } catch(PDOException $e){
