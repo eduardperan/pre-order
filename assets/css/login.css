@@ -1,0 +1,74 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: purple;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;    
+}
+
+.form-box{
+    max-width: 500px;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid gainsboro;
+    background-color: white;
+
+}
+.form-box > .box-header{
+    height: 50px;
+    background-color:plum;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.form-box > .box-header > span{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.form-box > .box-body{
+    padding: 20px;
+}
+.card-login, .card-register{
+    display: flex;
+    flex-flow: column wrap; 
+}
+
+/* Card Login items */
+.card-login > input[type="text"]{
+    margin: 2px 0;
+    padding-left: 3px;
+}
+.card-login > input, .card-login > button{
+    height: 30px;
+    border-radius: 5px;
+}
+.card-login > button{
+    cursor: pointer;
+}
+/* Card Login items */
+
+/* Card Register items */
+.card-register > input[type="text"], 
+.card-register > input[type="email"],
+.card-register > input[type="password"]{
+    margin: 2px 0;
+    padding-left: 3px;
+}
+.card-register > input, .card-register > button{
+    height: 30px;
+    border-radius: 5px;
+}
+.card-register > button{
+    cursor: pointer;
+}
+/* Card Register items */
+
+.dactive{
+    display: none !important;
+}
